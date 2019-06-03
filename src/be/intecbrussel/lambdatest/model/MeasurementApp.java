@@ -15,7 +15,9 @@ public class MeasurementApp {
         printSortedByLightIntensity(generateMeasurementArray(3));
 
         System.out.println("---Map to info string---");
-        mapToInfoString(generateMeasurementArray(3));
+        for (SensorMeasurement a : generateMeasurementArray(3)){
+            mapToInfoString(generateMeasurementArray(3));
+        }
 
         System.out.println("---Print average Temperature---");
         printAverageTemperature(generateMeasurementArray(3));
@@ -64,10 +66,17 @@ public class MeasurementApp {
     public static String[] mapToInfoString(SensorMeasurement[] sensorMeasurements) {
 
 
-        String[] string = Stream.of(sensorMeasurements)
-                .map(s-> String.format("humidity: %d %; LightIntensity: %dlumen; Temperature: %.1f degrees Celcius(%.1f Fahrenheit)",s.getHumidity(),s.getLightIntensity(),s.getTemperatureCelcius(),s.getTemperatureFahrenheit()))
-                .toString()
-                .
+//        String[] string = Stream.of(sensorMeasurements)
+//                .map(s-> String.format("humidity: %d %; LightIntensity: %dlumen; Temperature: %.1f degrees Celcius(%.1f Fahrenheit)",s.getHumidity(),s.getLightIntensity(),s.getTemperatureCelcius(),s.getTemperatureFahrenheit()))
+//                .toArray();
+//
+//        String [] string = Stream.of(sensorMeasurements)
+//                .toArray(String[]::new);
+        String [] string = Stream.of(sensorMeasurements)
+                .map(s-> String.format("humidity: %.1f LightIntensity: %.1f lumen Temperature: %.1f degrees Celcius(%.1f Fahrenheit)",s.getHumidity(),s.getLightIntensity(),s.getTemperatureCelcius(),s.getTemperatureFahrenheit()))
+                .toArray(String[]::new);
+
+
 
 
 

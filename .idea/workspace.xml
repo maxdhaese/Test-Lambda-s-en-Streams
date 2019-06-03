@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d5025a10-62e1-465b-8762-6948ea6621f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/MeasurementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/MeasurementApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/RandomMeasurementGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/RandomMeasurementGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/SensorMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/SensorMeasurement.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/MeasurementApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
+            <state relative-caret-position="476">
+              <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,7 +124,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559569139134" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559570326032" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -240,15 +238,22 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/stream/Nodes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1956">
+        <state relative-caret-position="222">
           <caret line="1229" selection-start-line="1229" selection-end-line="1229" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/util/Spliterators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="947" selection-start-line="947" selection-end-line="947" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/be/intecbrussel/lambdatest/model/MeasurementApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
+        <state relative-caret-position="476">
+          <caret line="76" column="40" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
