@@ -1,21 +1,21 @@
 package be.intecbrussel.lambdatest.model;
 
+import java.math.BigDecimal;
 import java.util.Random;
+import java.util.stream.Stream;
 
 public class RandomMeasurementGenerator implements MeasurementGenerator {
 
     @Override
     public SensorMeasurement generateMeasurement() {
         Random rand = new Random();
-        int [] humidity = rand.ints(0,100)
-                .toArray();
-        int [] lightIntensity = rand.ints(0,10000)
-                .toArray();
-        int [] temperature = rand.ints(-70,70)
-                .toArray();
+        int low = -70;
+        int high = 70;
 
 
 
-        return null;
+        return new SensorMeasurement(BigDecimal.valueOf(rand.nextInt(100)),
+                BigDecimal.valueOf(rand.nextInt(10000)),
+                BigDecimal.valueOf(rand.nextInt(high-low)+high));
     }
 }
