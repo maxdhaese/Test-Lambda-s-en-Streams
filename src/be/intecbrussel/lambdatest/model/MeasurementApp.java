@@ -1,9 +1,7 @@
 package be.intecbrussel.lambdatest.model;
 
-import javax.swing.text.html.Option;
 import java.math.BigDecimal;
 import java.util.*;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MeasurementApp {
@@ -15,6 +13,9 @@ public class MeasurementApp {
 
         System.out.println("---Print sorted by lightIntensity---");
         printSortedByLightIntensity(generateMeasurementArray(3));
+
+        System.out.println("---Map to info string---");
+        mapToInfoString(generateMeasurementArray(3));
 
         System.out.println("---Print average Temperature---");
         printAverageTemperature(generateMeasurementArray(3));
@@ -41,7 +42,7 @@ public class MeasurementApp {
 
     public static void printHighestTemperature(SensorMeasurement[] sensorMeasurements) {
         Optional<BigDecimal> max = Stream.of(sensorMeasurements)
-                .map(s->s.getTemperatureFahrenheit())
+                .map(SensorMeasurement::getTemperatureCelcius)
                 .max(BigDecimal::compareTo);
 
         if (max.isPresent()){
@@ -61,22 +62,23 @@ public class MeasurementApp {
     }
 
     public static String[] mapToInfoString(SensorMeasurement[] sensorMeasurements) {
-//        Stream<SensorMeasurement> stream =Arrays.stream(sensorMeasurements)
-//                .forEach(str-> System.out.printf("humidity: %1.f; LightIntensity: %d lumen; Temperature: %.1f",str.getHumidity(),str.getLightIntensity(),str.getTemperatureCelcius()));
-        String[] strings = Arrays.stream(sensorMeasurements)
-                .map(String.format() -> "%s","test")
+
+
+        String[] string = Stream.of(sensorMeasurements)
+                .map(s-> String.format("humidity: %d %; LightIntensity: %dlumen; Temperature: %.1f degrees Celcius(%.1f Fahrenheit)",s.getHumidity(),s.getLightIntensity(),s.getTemperatureCelcius(),s.getTemperatureFahrenheit()))
+                .toString()
+                .
 
 
 
-
-        return null;
+        return string ;
 
     }
 
 
     public static void printAverageTemperature(SensorMeasurement[] sensorMeasurements) {
         OptionalDouble avg = Stream.of(sensorMeasurements)
-                .mapToDouble(s->s.getTemperatureFahrenheit().doubleValue())
+                .mapToDouble(s->s.getTemperatureCelcius().doubleValue())
                 .average();
 
         if (avg.isPresent()){

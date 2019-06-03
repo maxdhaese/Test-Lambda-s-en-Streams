@@ -7,12 +7,13 @@ public class SensorMeasurement {
     private BigDecimal temperature;
     private BigDecimal lightIntensity;
 
+    //create constructor
     public SensorMeasurement(BigDecimal humidity, BigDecimal temperature, BigDecimal lightIntensity) {
         this.humidity = humidity;
         this.temperature = temperature;
         this.lightIntensity = lightIntensity;
     }
-
+    //getters
     public BigDecimal getHumidity() {
         return humidity;
     }
@@ -26,7 +27,7 @@ public class SensorMeasurement {
     }
 
     public BigDecimal getTemperatureFahrenheit() {
-        return temperature;
+        return temperature.multiply(new BigDecimal(1.8)).add(BigDecimal.valueOf(32));
     }
 
     @Override

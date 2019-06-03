@@ -9,7 +9,7 @@ public class RandomMeasurementGenerator implements MeasurementGenerator {
     @Override
     public SensorMeasurement generateMeasurement() {
         Random rand = new Random();
-
+        //return an object of SensorMeasurment with random values between limited values
         return new SensorMeasurement(BigDecimal.valueOf(rand.nextInt(100)),
                 BigDecimal.valueOf(rand.nextInt(140) - 70),
                 BigDecimal.valueOf(rand.nextInt(10000))
